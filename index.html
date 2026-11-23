@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu moderne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 32px 16px;
+        background-color: #F4F6F5;
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+      }
+
+      #menu {
+        display: flex;
+        flex-wrap: wrap;
+        width: min(92%, 1040px);
+        margin: 0 auto;
+        background-color: #1F3A3D;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(31, 58, 61, 0.14);
+      }
+
+      .nav {
+        flex: 1 1 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 16px;
+        box-sizing: border-box;
+        color: #E8EFEA;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        position: relative;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .nav::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 0;
+        height: 3px;
+        background-color: #D9822B;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.22s ease;
+      }
+
+      .nav:hover,
+      .nav:focus-visible {
+        background-color: rgba(217, 130, 43, 0.14);
+        color: #FFFFFF;
+        outline: none;
+      }
+
+      .nav:hover::after,
+      .nav:focus-visible::after {
+        transform: scaleX(1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="menu" aria-label="Menu principal">
+      <a class="nav" href="#menu-1">MENU 1</a>
+      <a class="nav" href="#menu-2">MENU 2</a>
+      <a class="nav" href="#menu-3">MENU 3</a>
+      <a class="nav" href="#menu-4">MENU 4</a>
+      <a class="nav" href="#menu-5">MENU 5</a>
+    </nav>
+  </body>
+</html>
